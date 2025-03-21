@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingCart } from 'lucide-react';
+import { useCart } from '../context/CartContext'; // Importamos el contexto del carrito
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cart, setIsCartOpen } = useCart(); // Obtenemos el carrito y la función para abrirlo
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,9 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Calcular la cantidad total de productos en el carrito
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
@@ -27,10 +32,23 @@ export default function Header() {
           <a href="#contacto" className="hover:text-blue-500">Contacto</a>
         </nav>
 
+        {/* Icono del carrito con contador */}
+        <button
+          onClick={() => setIsCartOpen(true)}
+          className="relative flex items-center text-gray-900 md:ml-4"
+        >
+          <ShoppingCart size={28} />
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </button>
+
         {/* Botón menú hamburguesa (sólo en móvil) */}
         <button
           onClick={() => setMenuOpen(true)}
-          className="md:hidden p-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          className="md:hidden p-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400 ml-4"
         >
           <Menu size={24} />
         </button>
