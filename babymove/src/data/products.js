@@ -1,0 +1,58 @@
+export const products = [
+    {
+      id: 1,
+      name: 'Carro de bebé Bugaboo Fox 5',
+      price: 1299,
+      image: '/src/assets/carrito1.webp',
+      extra: 'Comparar',
+    },
+    {
+      id: 2,
+      name: 'Carro de bebé Stokke Negro',
+      price: 599,
+      image: '/src/assets/carrito2.webp',
+      extra: 'REGALO PACK TEXTIL 6+',
+    },
+    {
+      id: 3,
+      name: 'Carro de bebé Stokke Chasis Azul',
+      price: 639,
+      image: '/src/assets/carrito3.webp',
+      extra: 'Envío rápido',
+    },
+    {
+      id: 4,
+      name: 'Carro de bebé Stokke',
+      price: 599,
+      image: '/src/assets/carrito4.webp',
+      extra: 'REGALO PACK TEXTIL 6+',
+    },
+    {
+      id: 5,
+      name: 'Carro de bebé Cybex Balios S Lux',
+      price: 679,
+      image: '/src/assets/carrito5.webp',
+      extra: 'Descuento 10%',
+    },
+    {
+      id: 6,
+      name: 'Carro de bebé Inglesina Aptica',
+      price: 899,
+      image: '/src/assets/carrito6.webp',
+      extra: 'Envío en 24h',
+    },
+    {
+      id: 7,
+      name: 'Carro de bebé Chicco Best Friend',
+      price: 349,
+      image: '/src/assets/carrito7.webp',
+      extra: 'Comparar',
+    },
+    {
+      id: 8,
+      name: 'Carro de bebé Jané Muum Pro',
+      price: 799,
+      image: '/src/assets/carrito8.webp',
+      extra: 'Edición especial',
+    },
+  ];

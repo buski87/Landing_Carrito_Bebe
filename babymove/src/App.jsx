@@ -1,29 +1,22 @@
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import ProductSection from './components/ProductSection';
-import FAQS from './components/FAQS';
-import Testimonial from './components/Testimonial';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import CartModal from './components/CartModal';
-import { CartProvider } from './context/CartContext'; // Asegúrate de importar el proveedor del carrito
+import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <CartProvider> {/* ✅ Envuelve toda la app en el CartProvider */}
+    <CartProvider>
       <div className="bg-gray-100 text-gray-900 min-h-screen font-sans transition-colors duration-300">
-        <Header />
-        <HeroSection />
-        <FeaturesSection />
-        <ProductSection />
-        <CartModal /> {/* El modal del carrito debe estar aquí */}
-        <FAQS />
-        <Testimonial />
-        <Contact />
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/producto/:id" element={<ProductDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <CartModal />
       </div>
-    </CartProvider> 
+    </CartProvider>
   );
 }
 
