@@ -5,6 +5,8 @@ export const products = [
       price: 1299,
       image: '/src/assets/carrito1.webp',
       extra: 'Comparar',
+      description: 'El carrito ideal para paseos suaves y seguros en todo tipo de terrenos.',
+      accessories: ['Burbuja de lluvia', 'Bolsa de transporte', 'Capota extensible'],
     },
     {
       id: 2,
@@ -12,6 +14,8 @@ export const products = [
       price: 599,
       image: '/src/assets/carrito2.webp',
       extra: 'REGALO PACK TEXTIL 6+',
+      description: 'Diseño ergonómico y compacto con tejidos de alta calidad.',
+      accessories: ['Sombrilla', 'Portavasos', 'Cobertor de pies'],
     },
     {
       id: 3,
@@ -19,6 +23,8 @@ export const products = [
       price: 639,
       image: '/src/assets/carrito3.webp',
       extra: 'Envío rápido',
+      description: 'Carrito elegante con gran maniobrabilidad para la ciudad.',
+      accessories: ['Capota con ventilación', 'Bolsa organizadora'],
     },
     {
       id: 4,
@@ -26,6 +32,8 @@ export const products = [
       price: 599,
       image: '/src/assets/carrito4.webp',
       extra: 'REGALO PACK TEXTIL 6+',
+      description: 'Carrito resistente y compacto, ideal para viajes.',
+      accessories: ['Mosquitera', 'Protector solar', 'Bolsa para pañales'],
     },
     {
       id: 5,
@@ -33,6 +41,8 @@ export const products = [
       price: 679,
       image: '/src/assets/carrito5.webp',
       extra: 'Descuento 10%',
+      description: 'Combina diseño y funcionalidad con gran comodidad para el bebé.',
+      accessories: ['Capazo S', 'Red antiinsectos', 'Colchoneta reversible'],
     },
     {
       id: 6,
@@ -40,6 +50,8 @@ export const products = [
       price: 899,
       image: '/src/assets/carrito6.webp',
       extra: 'Envío en 24h',
+      description: 'Sistema de transporte completo con plegado sencillo y elegante.',
+      accessories: ['Bolso maternal', 'Burbuja de lluvia', 'Base para coche'],
     },
     {
       id: 7,
@@ -47,6 +59,8 @@ export const products = [
       price: 349,
       image: '/src/assets/carrito7.webp',
       extra: 'Comparar',
+      description: 'Ligero y fácil de manejar, perfecto para el uso diario.',
+      accessories: ['Reposapiés ajustable', 'Cesta portaobjetos', 'Sombrilla'],
     },
     {
       id: 8,
@@ -54,5 +68,8 @@ export const products = [
       price: 799,
       image: '/src/assets/carrito8.webp',
       extra: 'Edición especial',
+      description: 'Edición limitada con acabados premium y estilo único.',
+      accessories: ['Capazo Matrix Light', 'Bolsa cambiador', 'Funda impermeable'],
     },
   ];
+  

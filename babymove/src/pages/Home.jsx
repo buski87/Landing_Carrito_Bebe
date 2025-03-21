@@ -6,11 +6,22 @@ import FAQS from '../components/FAQS';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import CartModal from '../components/CartModal';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    const shouldScroll = localStorage.getItem('scrollToProductos');
+    if (shouldScroll === 'true') {
+      const section = document.getElementById('productos');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        localStorage.removeItem('scrollToProductos');
+      }
+    }
+  }, []);
+
   return (
-    <div className="bg-gray-100 text-gray-900 min-h-screen font-sans transition-colors duration-300">
+    <>
       <Header />
       <HeroSection />
       <FeaturesSection />
@@ -19,7 +30,6 @@ export default function Home() {
       <Testimonial />
       <Contact />
       <Footer />
-      <CartModal /> {/* ✅ Importante para que el modal del carrito siempre esté disponible */}
-    </div>
+    </>
   );
 }
