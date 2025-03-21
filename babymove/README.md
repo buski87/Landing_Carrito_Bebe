@@ -1,3 +1,38 @@
+# 👶 BabyMove – Landing Page de Carritos de Bebé
+
+Proyecto profesional desarrollado con **React + Vite + Tailwind CSS**, pensado como una landing page moderna, responsive y funcional para mostrar productos premium para bebés.
+
+---
+
+## ✨ Características
+
+- 🎨 **Diseño limpio y moderno** con Tailwind CSS
+- ⚙️ **Desarrollado con Vite** para alta velocidad y eficiencia
+- 💻 **Totalmente responsive** (móvil, tablet y escritorio)
+- 🛒 **Carrito de compras funcional**
+  - Añadir productos
+  - Aumentar/disminuir cantidades
+  - Eliminar productos
+  - Modal con animación (`framer-motion`)
+  - Icono de carrito en el header con contador dinámico
+- 📦 **Productos filtrables por precio**
+- 📩 **Formulario de contacto funcional** (EmailJS)
+- ❓ **Sección de FAQs**
+- 🧑‍🤝‍🧑 **Testimonios de clientes**
+- 💾 **Persistencia de carrito con LocalStorage**
+- 🧠 **Accesibilidad y buenas prácticas UX/UI**
+
+---
+
+## 🚀 Tecnologías usadas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [EmailJS](https://www.emailjs.com/)
+- [Lucide React Icons](https://lucide.dev/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
