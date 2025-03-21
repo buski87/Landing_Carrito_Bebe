@@ -1,5 +1,6 @@
 import { useCart } from '../context/CartContext';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // ✅ añadido
 
 export default function CartModal() {
   const {
@@ -87,10 +88,16 @@ export default function CartModal() {
           >
             Cerrar
           </button>
+
           {cart.length > 0 && (
-            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-              Finalizar compra
-            </button>
+            <Link
+                to="/checkout"
+                onClick={() => setIsCartOpen(false)} // ✅ Cierra el modal
+            >
+                <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+                Finalizar compra
+                </button>
+            </Link>
           )}
         </div>
       </motion.div>
