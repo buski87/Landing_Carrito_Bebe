@@ -12,10 +12,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        'TU_SERVICE_ID',     // reemplaza con tu ID
-        'TU_TEMPLATE_ID',    // reemplaza con tu ID
+        'service_jqgk4u7',     // reemplaza con tu ID
+        'template_07l8t5q',    // reemplaza con tu ID
         formRef.current,
-        'TU_PUBLIC_KEY'      // reemplaza con tu key pública
+        'mhcwP3jTD6V6oRO60'      // reemplaza con tu key pública
       )
       .then(() => {
         setLoading(false);
